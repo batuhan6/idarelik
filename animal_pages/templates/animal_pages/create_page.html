@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<form method="POST">
+  {% csrf_token %}
+  <label for="animal_name">Name</label>
+  <input type="text" id="animal_name" name="animal_name">
+
+  <label for="descriptions">Descriptions</label>
+  <input type="text" id="descriptions" name="descriptions">
+
+  <button type="submit"> Save </button>
+</form>
+
+{% endblock %}

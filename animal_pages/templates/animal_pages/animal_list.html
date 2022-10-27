@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-2 bg-primary">Burasi hayvan listesi</div>
+    <div class="col-10">
+        <div class="row">
+
+            {% for animal in animals %}
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <!-- <img src="/media/{{animal.image}}" class="card-img-top" alt="...">  -->
+                    <div class="card-body">
+                        <a href="/animal_pages/profile/{{animal.id}}"> <h5 class="card-title">{{animal.animal_name}}</h5> </a>  <!--  interpolation -->
+                        <p class="card-text">
+                            {{animal.descriptions}}
+                        </p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+
+        </div>
+    </div>
+
+</div>
+{% endblock %}

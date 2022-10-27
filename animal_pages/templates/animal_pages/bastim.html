@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<p>sfdga</p>
+<ul>
+            {% for animal in animals_list %}
+
+                <li>{{animal.animal_name}}</li>
+
+            {% endfor %}
+
+</ul>
+
+{% endblock %}
